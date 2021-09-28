@@ -1,9 +1,11 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <div>
+    <div v-if="mail.length == 10">
       <ul>
-        <li><strong>{{ mail }}</strong></li>
+        <li v-for="email in mail" :key="email">
+          <strong>{{ email }}</strong>
+        </li>
       </ul>
     </div>
   </div>
@@ -27,6 +29,6 @@ ul {
 }
 li {
   margin: 0 10px;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 </style>
